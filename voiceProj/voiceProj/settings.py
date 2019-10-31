@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'voiceapp',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,14 @@ WSGI_APPLICATION = 'voiceProj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'NAME': 'akindb',
+        'USER': 'akinlolu',
+        'PASSWORD': 'akeens4real',
+        'PORT': '3306'
     }
 }
 
